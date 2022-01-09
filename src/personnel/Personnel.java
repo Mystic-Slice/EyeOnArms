@@ -3,7 +3,7 @@ package personnel;
 import java.util.Scanner;
 import Utility.BankAccount;
 
-public abstract class Personnel{
+public  class Personnel{
 	Scanner sc=new Scanner(System.in);
 	public Integer  id;
 	public String name;
@@ -19,7 +19,7 @@ public abstract class Personnel{
 	int GetPersonnelCount() {
 		return PersonnelCount;
 	}
-	abstract double CalculateIncome();
+	
 	
 	
 }
