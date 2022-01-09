@@ -27,7 +27,28 @@ public class Personnel {
 =======
 	public Double getBalance()
 	{
-		return this.bankaccount.getbalance();
+		return this.bankaccount.getBalance();
+	}
+	public int getID() {
+		return this.id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public BankAccount getBankaccount() {
+		return bankaccount;
+	}
+	public void setBankaccount(BankAccount bankaccount) {
+		this.bankaccount = bankaccount;
+	}
+	public static int getPersonnelCount() {
+		return PersonnelCount;
+	}
+	public static void setPersonnelCount(int personnelCount) {
+		PersonnelCount = personnelCount;
 	}
 	
 >>>>>>> 0803c8e9d1f26576ed9e545656e5187a73df1cc9

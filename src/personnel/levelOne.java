@@ -26,16 +26,20 @@ public class levelOne extends Personnel {
 
 	public Award AddAward() throws Exception{
 		String aname;
-		int pmoney;
+		Double pmoney;
 		System.out.println("enter the award name");
 		aname=sc.next();
 		System.out.println("enter the prize money");
-		pmoney=sc.nextInt();
+		pmoney=sc.nextDouble();
+		this.bankaccount.setBalance(this.bankaccount.getBalance()+pmoney);
 		Date d=new Date();
 		Award dw=new Award(aname,pmoney,d);
 		awardsRecieved.add(dw);	
 		return dw;
 	}
+	/*
+	 * How to implement calculateIncome 
+	 */
 
 <<<<<<< HEAD
 	public double CalculateIncome() {
@@ -44,8 +48,43 @@ public class levelOne extends Personnel {
 >>>>>>> 0803c8e9d1f26576ed9e545656e5187a73df1cc9
 		return this.BaseSalary;
 	}
-	public int getID() {
-		return this.id;
+
+	public Integer getLevel() {
+		return level;
 	}
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+	public String getWing() {
+		return wing;
+	}
+	public void setWing(String wing) {
+		this.wing = wing;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public Double getBaseSalary() {
+		return BaseSalary;
+	}
+	public void setBaseSalary(Double baseSalary) {
+		BaseSalary = baseSalary;
+	}
+	public ArrayList<Award> getAwardsRecieved() {
+		return awardsRecieved;
+	}
+	public void setAwardsRecieved(ArrayList<Award> awardsRecieved) {
+		this.awardsRecieved = awardsRecieved;
+	}
+	public static Integer getOfficerCount() {
+		return OfficerCount;
+	}
+	public static void setOfficerCount(Integer officerCount) {
+		OfficerCount = officerCount;
+	}
+	
 
 }
