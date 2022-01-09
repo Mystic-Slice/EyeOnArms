@@ -1,5 +1,5 @@
 package personnel;
 
 public interface login {
-	authenticate 
+	public boolean validateUsername(String password);
 }

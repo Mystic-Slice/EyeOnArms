@@ -24,23 +24,28 @@ public class levelOne extends Personnel {
 		 OfficerCount= OfficerCount+1;
 	}
 
-	public void AddAward() throws Exception{
+	public Award AddAward() throws Exception{
 		String aname;
 		int pmoney;
-		String da;
 		System.out.println("enter the award name");
 		aname=sc.next();
 		System.out.println("enter the prize money");
 		pmoney=sc.nextInt();
-		System.out.println("enter the date when the award was recieved");
-		da=sc.next();
-		Date d=new SimpleDateFormat("dd/MM/yyyy").parse(da);
+		Date d=new Date();
 		Award dw=new Award(aname,pmoney,d);
-		awardsRecieved.add(dw);	 		
+		awardsRecieved.add(dw);	
+		return dw;
 	}
 
+<<<<<<< HEAD
 	public double CalculateIncome() {
+=======
+	double CalculateIncome() {
+>>>>>>> 0803c8e9d1f26576ed9e545656e5187a73df1cc9
 		return this.BaseSalary;
+	}
+	public int getID() {
+		return this.id;
 	}
 
 }
